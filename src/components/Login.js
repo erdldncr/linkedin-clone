@@ -3,7 +3,6 @@ import { Redirect } from "react-router-dom";
 import styled from "styled-components";
 import { SignInAPI } from "../actions";
 const Login = (props) => {
-  console.log(props);
   return (
     <Container>
       {props.user && <Redirect to="/home" />}

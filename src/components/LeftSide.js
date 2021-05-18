@@ -9,7 +9,9 @@ const LeftSide = (props) => {
           <CardBackground />
           <a>
             <Photo />
-            <Link>Welcome, there!</Link>
+            <Link>
+              Welcome, {props.user ? props.user.displayName : "there!"}
+            </Link>
           </a>
           <a>
             <AddPhotoText>Add a photo</AddPhotoText>
@@ -195,11 +197,11 @@ const CommunityCard = styled(ArtCard)`
 
 const mapStateToProps = (state) => {
   return {
-    // pic: state.userState.user.photoURL,
+    user: state.userState.user,
   };
 };
 
-const mapDispatchToProps = (state) => {
+const mapDispatchToProps = (dispatch) => {
   return {};
 };
 
